@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>watsonx Orchestarte AI Agent</title>
+
+</head>
+<body>
+
+<div id=root>
+</div>
+
+<script>
+  window.wxOConfiguration = {
+    clientVersion: "latest",
+    orchestrationID: "a2649983-58f0-44c9-92e4-abb758221ecd",
+    hostUrl: "https://dl.watson-orchestrate.ibm.com",
+    rootElementId: "root",
+    showLauncher: false
+    // token: "<CLIENT_JWT_GOES_HERE>"
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostUrl}/webclient/wxoLoader.js`;
+    script.addEventListener('load', function () {
+      wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);
+</script>
+
+</body>
+</html>
